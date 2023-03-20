@@ -1,0 +1,77 @@
+body{
+    
+    font-family: 'Inter', sans-serif;
+}
+
+.scoreboard_container{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.scoreboard_content{
+    display: grid;
+    grid-template-columns: 200px 1fr 200px ;
+    gap: 5px;
+    
+}
+
+.scoreboard_content .left{
+    background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(247,247,247,1) 0%, rgba(164,164,164,1) 100%);
+    padding: 20px 40px;
+    border-radius: 0 50px 50px 0;
+    position: relative;
+    display: flex;
+    justify-content: flex-end                  
+}
+
+.scoreboard_content .left .Home_img img{
+    width: auto;
+    height: 40px;
+}
+
+.scoreboard_content .center{
+    background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(247,247,247,1) 0%, rgba(164,164,164,1) 100%);
+    
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+}
+
+.scoreboard_content .center .center_left{
+   display: flex;
+   gap: 1rem;
+}
+.scoreboard_content .center .center_center{
+    display: flex;
+    background-color: rgb(225, 255, 0);
+    padding: 10px;
+    border-radius: 50px;
+    gap: 1rem;
+ }
+.scoreboard_content .center .center_right{
+    display: flex;
+    gap: 1rem;
+ }
+
+.scoreboard_content .right{
+    background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(247,247,247,1) 0%, rgba(164,164,164,1) 100%);
+    padding: 20px 40px;
+    border-radius: 50px 0 0 50px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start  
+}
+
+
+
+.scoreboard_content .right .Away_img img{
+    width: auto;
+    height: 40px;
+}

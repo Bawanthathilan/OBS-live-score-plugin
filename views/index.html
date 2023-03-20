@@ -1,0 +1,55 @@
+<!-- previre data in html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Live Scores</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    
+    <div class="scoreboard_container">
+        <div class="scoreboard_content">
+           <div class="left">
+            <div class="Home_img">
+                <img src="https://live.staticflickr.com/2052/2294634746_838b570b51_z.jpg" alt="Home">
+            </div>
+           </div>
+              <div class="center">
+                <div class="center_left">
+                    <h1>Sri Lanka</h1>
+                    <h1 id="Home">0</h1>
+                </div>
+                <div class="center_center">ABC Championship 2023</div>
+                <div class="center_right">
+                    <h1>India</h1>
+                    <h1 id="Away">0</h1>
+                </div>
+              </div>
+              <div class="right">
+                <div class="Away_img">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" alt="Home">
+                </div>
+              </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    </table>
+    <script>
+            const socket = io();
+            socket.on('score', (data) => {
+            
+                document.getElementById('Home').innerText = `${data.Home}`;
+                document.getElementById('Away').innerText = `${data.Away}`;
+
+          });
+        
+
+     
+    </script>
+  </body>
+</html>

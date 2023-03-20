@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "homepage": "https://github.com/Bawanthathilan/OBS-live-score-plugin#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "firebase-admin": "^11.5.0",
     "nodemon": "^2.0.21",
     "socket.io": "^4.2.0"
   }
